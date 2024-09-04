@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify%20Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/media.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <link id="theme" rel="stylesheet" href="{{ url_for('static', filename='css/black.css') }}">
+    <script src="{{ url_for('static', filename='js/lib/jquery-3.6.4.min.js') }}"></script>
+    <style id="jkmvc">
+        body{
+            background-color: #17181f;
+        }
+        iframe {
+        position: absolute;
+        width: 96%; 
+        height: 92vh; 
+        top: 60px;
+        left: 60px;
+        background-color: rgba(255, 255, 255, 0);
+      }
+      </style>
+</head>
+<body>
+    <div class="menu_top">
+        <div class="center_top_menu">
+            <div onclick="openModal1()" class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/2.png') }}"></div>
+            <div onclick="openModal()" class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/11.png') }}"></div>
+            <div class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/19.png') }}"></div>
+        </div>
+        {% if access %}
+        {% else %}
+            <button onclick="openModal3()" class="button_reg">Register an account</button>
+        {% endif %}
+        <div class="hover_img1"><img class="img_chenge" src="{{ url_for('static', filename='img/38.png') }}"></div>
+    </div>
+    <div class="menu_left">
+        <div class="menu_left_1">
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/9.png') }}"></div>
+            <div onclick="yhg3()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/50.png') }}"></div>
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/8.png') }}"></div>
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/33.png') }}"></div>
+            <div onclick="yhg1()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/13.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/14.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/17.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+        </div>
+        <div class="menu_left_2">
+            <div onclick="openModal10()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/5.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/4.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/20.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/29.png') }}"></div>
+            <div class="hover_page_chenge1"></div>
+            <div class="hover_page_chenge1"></div>
+        </div>
+    </div>
+
+
+    <div class="menu_left_2_div">
+        <div class="menu_left_1">
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/9.png') }}"></div>
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/50.png') }}"></div>
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/8.png') }}"></div>
+            <div onclick="yhg()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/33.png') }}"></div>
+            <div onclick="yhg1()" class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/13.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/14.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/17.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/42.png') }}"></div>
+        </div>
+        <div class="menu_left_2">
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/5.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/4.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/20.png') }}"></div>
+            <div class="hover_page_chenge"><img class="page_chenge" src="{{ url_for('static', filename='img/29.png') }}"></div>
+            <div class="hover_page_chenge1"></div>
+            <div class="hover_page_chenge1"></div>
+        </div>
+    </div>
+
+    
+
+    <div class="bac_next_menu">
+        <div class="center_bac_nex">
+            <div class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/59.png') }}"></div>
+            <div class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/60.png') }}"></div>
+        </div>
+    </div>
+
+
+    <div id="modal"> 
+        <div id="modal-content">
+            <div class="settings_left">
+                <div id="color_menu_settings" onclick="rch1()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/1.png') }}"><text class="text_menu_setings">Topic</text></div>
+                <div id="color_menu_settings1" onclick="rch2()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/2.png') }}"><text class="text_menu_setings">User</text></div>
+                <div id="color_menu_settings2" onclick="rch3()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/3.png') }}"><text class="text_menu_setings">Customization</text></div>
+                <div id="color_menu_settings3" onclick="rch4()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/4.png') }}"><text class="text_menu_setings">VIP</text></div>
+                <div id="color_menu_settings4" onclick="rch5()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/5.png') }}"><text class="text_menu_setings">Investor</text></div>
+                <div id="color_menu_settings5" onclick="rch6()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/6.png') }}"><text class="text_menu_setings">Language</text></div>
+                <div id="color_menu_settings6" onclick="rch7()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/7.png') }}"><text class="text_menu_setings">Updates</text></div>
+                <div id="color_menu_settings7" onclick="rch8()" class="chenge_settings"><img class="img_setings_menu" src="{{ url_for('static', filename='img/settings/7.png') }}"><text class="text_menu_setings">Article</text></div>
+            </div>
+            <div class="settings_ring">
+                <div class="div" id="did">
+                    <p class="color_text">Topic</p>
+                    <p class="color_text1">Choose a topic for yoursel!</p>
+
+                    <button class="div_tontent_holow blod fonsize_0 color_21">
+                        <text class="top_text top_5">Available themes:</text>
+                    </button>
+                        <br>
+                        <div class="div_tontent_2 color_21">
+                            <button onclick="openModal7()" class="black_button">Black</button>
+                            <button onclick="openModal8()" class="black_button">White</button>
+                            <button class="black_button">Upload your style</button>
+                            <button class="white_button">Upload your style</button>
+                            <br><br>
+                            <p class="color_text2">
+                                When choosing a topic, it is recorded in local storage. This is necessary so that when the page is reloaded, the theme you selected is loaded.
+                                <br><br>
+                                Want to upload your theme for yourself? Then drop the file here. Your file will be saved to local storage on your computer.
+                                <br><br>
+                                <button id="logaut">logaut</button>
+                                <br><br>
+                                This is the vip version of customization, with its help we can completely change our site, not only the color, but now you can change their size, move it and many other things. To use ustomization+ upload your file here.Customization+ is stored in local storage.
+                            </p>
+                        </div>
+                </div>
+                <div class="div" id="did1">
+                    <p class="color_text">User</p>
+                    <p class="color_text1">Look at your account!</p>
+                    <br>
+                    <div class="div_tontent_holow">Account:</div>
+                    <br>
+                    <div class="div_tontent">
+                            
+                    </div>
+                </div>
+                <div class="div" id="did2">
+                    <p class="color_text">Customization</p>
+                    <p class="color_text1">We customize!</p>
+
+                    <button class="div_tontent_holow blod fonsize_0 color_21">
+                        <text class="top_text top_5">Background:</text>
+                    </button>
+                        <br>
+                        <div class="div_tontent_3 color_21">
+                            {% if access %}
+                            <img onclick="changeIframeSrc('/fon');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/2.png') }}">
+                            <img onclick="changeIframeSrc('/fon1');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/1.png') }}">
+                            <img onclick="changeIframeSrc('/fon2');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/3.png') }}">
+                            <img onclick="changeIframeSrc('/fon3');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/4.png') }}">
+                            <img onclick="changeIframeSrc('/fon4');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/5.png') }}">
+                            <img onclick="changeIframeSrc('/fon5');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/6.png') }}">
+                            <img onclick="changeIframeSrc('/fon6');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/7.png') }}">
+                            <img onclick="changeIframeSrc('/fon7');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/8.png') }}">
+                            <img onclick="changeIframeSrc('/fon8');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/9.png') }}">
+                            <img onclick="changeIframeSrc('/fon10');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/11.png') }}">
+                            <img onclick="changeIframeSrc('/fon11');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/12.png') }}">
+                            <img onclick="changeIframeSrc('/fon12');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/13.png') }}">
+                            <img onclick="changeIframeSrc('/fon13');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/14.png') }}">
+                            {% else %}
+                            <img onclick="changeIframeSrc('/fon');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/2.png') }}">
+                            <img onclick="changeIframeSrc('/fon1');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/1.png') }}">
+                            <img onclick="changeIframeSrc('/fon3');" class="fon_img_settings" src="{{ url_for('static', filename='img/fon/4.png') }}">
+                            {% endif %}
+                        </div>
+                </div>
+                <div class="div" id="did3">
+                    VIP
+                </div>
+                <div class="div" id="did4">
+                    Investor
+                </div>
+                <div class="div" id="did5">
+                    Language
+                </div>
+                <div class="div" id="did6">
+                    Updates
+                </div>
+                <div class="div" id="did7">
+                    Article
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    
+    <div id="modal1"> 
+        <div id="modal-content1">
+            <div class="history_div">
+                <div class="history_text">History</div>
+                <div class="history_button">
+                    <div class="center_top_menu">
+                        <div onclick="openModal2()" class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/46.png') }}"></div>
+                        <div class="hover_img"><img class="img_left1" src="{{ url_for('static', filename='img/24.png') }}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+    <div id="modal2"> 
+        <div id="modal-content4">
+            <p class="text_left fonsize_3 bold_fon color_siru">Account registration: Discord</p>
+            <hr class="hr_1">
+            <br><br>
+            <input id="code" placeholder="Enter your id discord" class="input_text_reg bold_fon" type="text">
+            <br><br>
+            <button  id="reg" class="button_global bold_fon color_siru gren fonsize_0 gren cursor transi">Next</button>
+            
+            <br><br><br>
+            <p class="a_href bold_fon fonsize_1">Have a question?</p>
+            <hr class="hr_1">
+            <br>
+            <p class="color_siru bold_fon fonsize_1">
+                In these fields, you need to enter your name and email address 3 times and repeat the password
+                <br><br>
+                In the last field, you need to specify your Discord ID
+                <br><br> 
+                It is mandatory to specify!
+            </p>
+        </div>
+    </div> 
+
+    <div id="modal3"> 
+        <div id="modal-content3">
+            <p class="text_left fonsize_3 bold_fon color_siru">Account registration</p>
+            <hr class="hr_1">
+            <button onclick="openModal5()" class="div_middle_img"><img class="button_middle_img" src="{{ url_for('static', filename='img/20.png') }}"></button>
+            <button onclick="openModal4()" class="div_middle_img"><img class="button_middle_img" src="{{ url_for('static', filename='img/29.png') }}"></button>
+            <button class="div_middle_img"><img class="button_middle_img" src="{{ url_for('static', filename='img/66.png') }}"></button>
+            <br><br><br><br>
+            <button onclick="openModal9()">login</button>
+            <br><br>
+            <p class="color_siru bold_fon fonsize_1">When you register, you automatically accept the terms</p>
+            <p class="a_href bold_fon fonsize_1">I accept the terms</p>
+            <br><br><br>
+            <p class="a_href bold_fon fonsize_1">Have a question?</p>
+            <hr class="hr_1">
+            <br>
+            <p class="color_siru bold_fon fonsize_1">
+                When you register in 1 druch elections, you must give us your user ID so that we can verify that you are human.
+                <br><br>
+                In option 3, you need to give us your gmail.com email so that we can reset your password.
+            </p>
+        </div>
+    </div> 
+
+    <div id="modal4"> 
+        <div id="modal-content4">
+           <div id="remuve">
+            <p class="text_left fonsize_3 bold_fon color_siru">Account registration: Discord</p>
+            <hr class="hr_1">
+            <br><br>
+            <input id="nicknameInput" placeholder="Enter your nickname" class="input_text_reg bold_fon" type="text">
+            <br><br>
+            <input id="passwordInput" placeholder="Enter your password" class="input_text_reg bold_fon" type="password">
+            <br><br>
+            <input id="confirmPasswordInput" placeholder="Enter your password again" class="input_text_reg bold_fon" type="password">
+            <br><br>
+            <input id="iddiscord" placeholder="Enter your id discord" class="input_text_reg bold_fon" type="text">
+            <br><br>
+            <button  id="submitButton" class="button_global bold_fon color_siru gren fonsize_0 gren cursor transi">Next</button>
+            
+            <br><br><br>
+            <p class="a_href bold_fon fonsize_1">Have a question?</p>
+            <hr class="hr_1">
+            <br>
+            <p class="color_siru bold_fon fonsize_1">
+                In these fields, you need to enter your name and email address 3 times and repeat the password
+                <br><br>
+                In the last field, you need to specify your Discord ID
+                <br><br> 
+                It is mandatory to specify!
+            </p>
+           </div>
+        </div>
+    </div> 
+    
+
+
+    <div id="modal5"> 
+        <div id="modal-content4">
+            <p class="text_left fonsize_3 bold_fon color_siru">Account registration: Telegram</p>
+            <hr class="hr_1">
+        </div>
+    </div> 
+
+    <div id="modal6"> 
+        <div id="modal-content4">
+            <p class="text_left fonsize_3 bold_fon color_siru">Account registration: Discord</p>
+            <hr class="hr_1">
+            <br><br>
+            <input id="nicknameInput" placeholder="Enter your nickname" class="input_text_reg bold_fon" type="text">
+        </div>
+    </div> 
+
+    <div id="modal7"> 
+        <div id="modal-content3">
+            <p class="text_left fonsize_3 bold_fon color_siru">Warning</p>
+            <hr class="hr_1">
+            <br>
+            <p class="color_text1">
+                Would you like to change the subject?
+                <br><br>
+                This action requires a page reload. You are sure you want to reload.
+                <br><br>
+                Topics are stored in local storage
+            </p>
+            <div class="div_button_old">
+                <button class="button_class_old" onclick="changeThemeToBlack()">Change the style</button>
+                <button onclick="clos1()" class="button_class_old">Back</button>
+            </div>
+        </div>
+    </div> 
+
+    <div id="modal8"> 
+        <div id="modal-content3">
+            <p class="text_left fonsize_3 bold_fon color_siru">Warning</p>
+            <hr class="hr_1">
+            <br>
+            <p class="color_text1">
+                Would you like to change the subject?
+                <br><br>
+                This action requires a page reload. You are sure you want to reload.
+                <br><br>
+                Topics are stored in local storage
+            </p>
+            <div class="div_button_old">
+                <button class="button_class_old" onclick="changeThemeToDefault()">Change the style</button>
+                <button onclick="clos2()" class="button_class_old">Back</button>
+            </div>
+        </div>
+    </div> 
+
+
+    <div id="modal9"> 
+        <div id="modal-content4">
+            <p class="text_left fonsize_3 bold_fon color_siru">Warning</p>
+            <hr class="hr_1">
+            <br>
+            <p class="color_text1">
+                <input id="name_login" type="text">
+                <input id="code_login" type="code">
+                <button id="login_log">login</button>
+            </p>
+            <div class="div_button_old">
+                <button class="button_class_old" onclick="changeThemeToDefault()">Change the style</button>
+                <button onclick="clos2()" class="button_class_old">Back</button>
+            </div>
+        </div>
+    </div> 
+
+    
+    <div id="modal10"> 
+        <div id="modal-content">
+            <div class="shop_menu">
+                <div class="senter_shop_text">
+                    <p class="text_chop cursor">Background</p>
+                    <p class="text_chop cursor">Privileges</p>
+                    <p class="text_chop cursor">Donat</p>
+                    <p class="text_chop cursor">Pass</p>
+                </div>
+            </div>
+            <div class="div_shop">
+                <p class="text2_shop">coin</p>
+                <p class="text2_shop">coin1</p>
+            </div>
+            <div class="div_shop_div">
+
+            <button class="div_tontent_holow blod fonsize_18 color_fon_1 color_22 left">
+                <text class="top_text top_5">Background:</text>
+            </button>
+                <br>
+                <div class="div_tontent_3 color_22 left">
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/5.png') }}"><p class="text_batton">Ball</p><p class="maker">200 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/6.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/7.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/8.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/9.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/14.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/11.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/12.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+                    <div onclick="list()" class="all_game"><img class="all_img_game big" src="{{ url_for('static', filename='img/fon/13.png') }}"><p class="text_batton">Overlap</p><p class="maker">150 coin</p></div>
+            </div> 
+
+            <br><br><br><br><br><br><br>
+            </div>
+        </div>
+    </div> 
+    
+    <div id="popup-container">
+        <p class="idfghjb">ввв</p>
+          </div>
+
+<div id="fon_div">
+    <iframe id="fon_chenge" class="bakdraun" src="/fon1" frameborder="0"></iframe>
+</div>
+    <main class="main">
+    <div id="uni"></div>
+    </main>
+</body>
+<script src="{{ url_for('static', filename='js/index.js') }}"></script>
+<script src="{{ url_for('static', filename='js/page.js') }}"></script>
+</html>
+

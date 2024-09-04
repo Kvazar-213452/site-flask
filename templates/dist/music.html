@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/swiper-bundle.min.css') }}" />
+    <link id="theme" rel="stylesheet" href="{{ url_for('static', filename='css/black.css') }}">
+    <script src="{{ url_for('static', filename='js/lib/swiper-bundle.min.js') }}"></script>
+</head>
+<body class="fon_global">
+        <img class="baner" src="{{ url_for('static', filename='img/64.png') }}">
+        <div class="baner_text">
+            <p class="text_baner">Article music!</p>
+            <p class="text_baner_2">Listen to music on the site Article!</p>
+        </div>
+
+    <div class="content_div_freme">
+        <div class="input_div">
+            <input class="input_game" placeholder="Find the music" type="text">
+            <button class="Find cursor">Find</button>
+        </div>
+<br><br>
+<br>
+        <div class="div_bac_nex">
+            <div class="swiper-button-nex bac1"><img class="img_swiper_button" src="{{ url_for('static', filename='img/59.png') }}"></div>
+            <div class="swiper-button-pre nex1"><img class="img_swiper_button" src="{{ url_for('static', filename='img/60.png') }}"></div>
+        </div>
+            <button class="div_tontent_holow blod fonsize_18 color_fon_1">
+            <img class="img_marcer_top" src="{{ url_for('static', filename='img/3.png') }}">
+            <text class="top_text">Popular music:</text>
+        </button>
+            <br>
+            <div class="div_tontent_2">
+                <div class="swiper-container1">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/3.png') }}"><p class="text_batton">Blaster</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/3.png') }}"><p class="text_batton">Pin-Pong</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/3.png') }}"><p class="text_batton">Layers</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/3.png') }}"><p class="text_batton">Tenis</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/3.png') }}"><p class="text_batton">2043</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/1.png') }}"><p class="text_batton">music</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/2.png') }}"><p class="text_batton">Cube</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/1.png') }}"><p class="text_batton">Snake</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/music/3.png') }}"><p class="text_batton">Targets</p><p class="maker">Artical studio</p></div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+    <br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+        <div class="div_bac_nex">
+            <div class="swiper-button-nex bac"><img class="img_swiper_button" src="{{ url_for('static', filename='img/59.png') }}"></div>
+            <div class="swiper-button-pre nex"><img class="img_swiper_button" src="{{ url_for('static', filename='img/60.png') }}"></div>
+        </div>
+            <button class="div_tontent_holow blod fonsize_18 color_fon_1">
+            <img class="img_marcer_top" src="{{ url_for('static', filename='img/3.png') }}">
+            <text class="top_text">Popular games:</text>
+        </button>
+            <br>
+            <div class="div_tontent_2">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/game/3.png') }}"><p class="text_batton">Blaster</p><p class="maker">Artical studio</p></div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+    
+<br><br><br>
+    <button class="div_tontent_holow blod fonsize_18 color_fon_1">
+    <img class="img_marcer_top" src="{{ url_for('static', filename='img/63.png') }}">
+    <text class="top_text">All games:</text>
+</button>
+    <br>
+    <div class="div_tontent_3">
+
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/1.png') }}"><p class="text_batton">Snake</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/2.png') }}"><p class="text_batton">Machines</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/3.png') }}"><p class="text_batton">Blaster</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/4.png') }}"><p class="text_batton">Tenis</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/5.png') }}"><p class="text_batton">Tetris</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/1.png') }}"><p class="text_batton">Ball</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/2.png') }}"><p class="text_batton">Cube</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/3.png') }}"><p class="text_batton">Ticks and tic-tac-toe</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/4.png') }}"><p class="text_batton">Layers</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/5.png') }}"><p class="text_batton">Rabbit</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/6.png') }}"><p class="text_batton">Sniper</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/7.png') }}"><p class="text_batton">2042</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/8.png') }}"><p class="text_batton">Game</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/9.png') }}"><p class="text_batton">Platforms</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/10.png') }}"><p class="text_batton">Targets</p><p class="maker">Artical studio</p></div>
+        <div class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/11.png') }}"><p class="text_batton">Tenis</p><p class="maker">Artical studio</p></div>
+</div>
+<br><br><br><br><br><br>
+
+
+
+
+
+</body>
+<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+<script src="{{ url_for('static', filename='js/style.js') }}"></script>
+</html> 

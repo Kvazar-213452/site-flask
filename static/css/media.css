@@ -1,0 +1,11 @@
+@media screen and (max-width: 500px) {
+  .menu_left_2_div{
+    display: block;
+}
+
+.menu_left{
+  display: none;
+}
+}
+
+

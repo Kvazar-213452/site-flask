@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='js/lib/swiper-bundle.min.css') }}" />
+    <script src="{{ url_for('static', filename='js/lib/swiper-bundle.min.js') }}"></script>
+</head>
+<body class="fon_global">
+        <img class="baner" src="{{ url_for('static', filename='img/61.png') }}">
+        <div class="baner_text">
+            <p class="text_baner">Article game!</p>
+            <p class="text_baner_2">Play in your browser without installing on your device!</p>
+        </div>
+
+    <div class="content_div_freme">
+        <div class="input_div">
+            <input class="input_game" placeholder="Find the game" type="text">
+            <button class="Find cursor">Find</button>
+        </div>
+<br><br>
+<br>
+        <div class="div_bac_nex">
+            <div class="swiper-button-nex bac"><img class="img_swiper_button" src="{{ url_for('static', filename='img/59.png') }}"></div>
+            <div class="swiper-button-pre nex"><img class="img_swiper_button" src="{{ url_for('static', filename='img/60.png') }}"></div>
+        </div>
+            <button class="div_tontent_holow blod fonsize_18 color_fon_1">
+            <img class="img_marcer_top" src="{{ url_for('static', filename='img/3.png') }}">
+            <text class="top_text">Popular games:</text>
+        </button>
+            <br>
+            <div class="div_tontent_2">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/game/3.png') }}"><p class="text_batton">Blaster</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/game/4.png') }}"><p class="text_batton">Pin-Pong</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/gamef/4.png') }}"><p class="text_batton">Layers</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/gamef/11.png') }}"><p class="text_batton">Tenis</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/gamef/7.png') }}"><p class="text_batton">2043</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/gamef/8.png') }}"><p class="text_batton">Game</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/gamef/2.png') }}"><p class="text_batton">Cube</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/gamef/10.png') }}"><p class="text_batton">Snake</p><p class="maker">Artical studio</p></div>
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/game/1.png') }}"><p class="text_batton">Targets</p><p class="maker">Artical studio</p></div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+    <br><br>
+<br><br><br><br><br><br><br><br><br><br><br>
+        <div class="div_bac_nex">
+            <div class="swiper-button-nex bac"><img class="img_swiper_button" src="{{ url_for('static', filename='img/59.png') }}"></div>
+            <div class="swiper-button-pre nex"><img class="img_swiper_button" src="{{ url_for('static', filename='img/60.png') }}"></div>
+        </div>
+            <button class="div_tontent_holow blod fonsize_18 color_fon_1">
+            <img class="img_marcer_top" src="{{ url_for('static', filename='img/3.png') }}">
+            <text class="top_text">Popular games:</text>
+        </button>
+            <br>
+            <div class="div_tontent_2">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="img_swiper" src="{{ url_for('static', filename='img/game/3.png') }}"><p class="text_batton">Blaster</p><p class="maker">Artical studio</p></div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+
+
+
+
+    
+<br><br><br><br>
+    <button class="div_tontent_holow blod fonsize_18 color_fon_1">
+    <img class="img_marcer_top" src="{{ url_for('static', filename='img/63.png') }}">
+    <text class="top_text">All games:</text>
+</button>
+    <br>
+    <div class="div_tontent_3">
+
+        <div onclick="list()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/1.png') }}"><p class="text_batton">Snake</p><p class="maker">Artical studio</p></div>
+        <div onclick="list1()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/2.png') }}"><p class="text_batton">Machines</p><p class="maker">Artical studio</p></div>
+        <div onclick="list2()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/3.png') }}"><p class="text_batton">Blaster</p><p class="maker">Artical studio</p></div>
+        <div onclick="list3()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/4.png') }}"><p class="text_batton">Tenis</p><p class="maker">Artical studio</p></div>
+        <div onclick="list4()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/game/5.png') }}"><p class="text_batton">Tetris</p><p class="maker">Artical studio</p></div>
+        <div onclick="all()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/1.png') }}"><p class="text_batton">Ball</p><p class="maker">Artical studio</p></div>
+        <div onclick="all1()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/2.png') }}"><p class="text_batton">Cube</p><p class="maker">Artical studio</p></div>
+        <div onclick="all2()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/3.png') }}"><p class="text_batton">Ticks and tic-tac-toe</p><p class="maker">Artical studio</p></div>
+        <div onclick="all3()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/4.png') }}"><p class="text_batton">Platforms</p><p class="maker">Artical studio</p></div>
+        <div onclick="all4()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/5.png') }}"><p class="text_batton">Rabbit</p><p class="maker">Artical studio</p></div>
+        <div onclick="all5()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/6.png') }}"><p class="text_batton">Jump</p><p class="maker">Artical studio</p></div>
+        <div onclick="all6()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/7.png') }}"><p class="text_batton">Chess</p><p class="maker">Artical studio</p></div>
+        <div onclick="all7()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/8.png') }}"><p class="text_batton">Game</p><p class="maker">Artical studio</p></div>
+        <div onclick="all8()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/9.png') }}"><p class="text_batton">Tetris_2</p><p class="maker">Artical studio</p></div>
+        <div onclick="all9()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/10.png') }}"><p class="text_batton">Targets</p><p class="maker">Artical studio</p></div>
+        <div onclick="all10()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/11.png') }}"><p class="text_batton">Tenis</p><p class="maker">Artical studio</p></div>
+        <div onclick="all11()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/12.png') }}"><p class="text_batton">Ninja</p><p class="maker">Artical studio</p></div>
+        <div onclick="all12()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/13.png') }}"><p class="text_batton">Shooting gallery</p><p class="maker">Artical studio</p></div>
+        <div onclick="all13()" class="all_game"><img class="all_img_game" src="{{ url_for('static', filename='img/gamef/14.png') }}"><p class="text_batton">2042</p><p class="maker">Artical studio</p></div>
+</div> 
+
+<br><br><br><br><br><br>
+
+
+
+</body>
+<script src="{{ url_for('static', filename='js/slider.js') }}"></script>
+<script>
+function list() {
+    window.parent.postMessage('game', '*');
+}
+
+function list1() {
+    window.parent.postMessage('game1', '*');
+}
+
+function list2() {
+    window.parent.postMessage('game2', '*');
+}
+
+function list3() {
+    window.parent.postMessage('game3', '*');
+}
+
+function list4() {
+    window.parent.postMessage('game4', '*');
+}
+
+//all
+//all
+//all
+//all
+//all
+//all
+
+function all() {
+    window.parent.postMessage('all', '*');
+}
+
+function all1() {
+    window.parent.postMessage('all1', '*');
+}
+
+function all2() {
+    window.parent.postMessage('all2', '*');
+}
+
+function all3() {
+    window.parent.postMessage('all3', '*');
+}
+
+function all4() {
+    window.parent.postMessage('all4', '*');
+}
+
+function all5() {
+    window.parent.postMessage('all5', '*');
+}
+
+function all6() {
+    window.parent.postMessage('all6', '*');
+}
+
+
+function all7() {
+    window.parent.postMessage('all7', '*');
+}
+
+function all8() {
+    window.parent.postMessage('all8', '*');
+}
+
+function all9() {
+    window.parent.postMessage('all9', '*');
+}
+
+function all10() {
+    window.parent.postMessage('all10', '*');
+}
+
+function all11() {
+    window.parent.postMessage('all11', '*');
+}
+
+function all12() {
+    window.parent.postMessage('all12', '*');
+}
+
+function all13() {
+    window.parent.postMessage('all13', '*');
+}
+</script>
+</html>
